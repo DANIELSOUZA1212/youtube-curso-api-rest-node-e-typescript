@@ -1,24 +1,12 @@
 import express from 'express';
 import cors from 'cors';
+import { router } from '../router/routes';
 import 'dotenv/config';
 
-import { JSONParseError } from './shared/middleware';
-import './shared/services/TranslationsYup';
-import { router } from './routes';
+const app = express();
 
+app.use(cors());
+app.use(express.json());
+app.use(router);
 
-const server = express();
-
-
-server.use(cors({
-  origin: process.env.ENABLED_CORS?.split(';') || []
-}));
-
-server.use(express.json());
-
-server.use(JSONParseError);
-
-server.use(router);
-
-
-export { server };
+export { app };
