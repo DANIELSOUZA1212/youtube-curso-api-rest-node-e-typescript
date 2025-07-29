@@ -16,6 +16,6 @@
     "types": ["node"],                // Inclui definições de tipos para Node
     "lib": ["ES2020"]                 // Biblioteca padrão ECMAScript
   },
-  "include": ["src/**/*"],
+  "include": ["src", "src/@types"],
   "exclude": ["node_modules", "dist"]
 }
