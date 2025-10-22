@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { StatusCodes } from 'http-status-codes';
 
 import { testServer } from '../jest.setup';

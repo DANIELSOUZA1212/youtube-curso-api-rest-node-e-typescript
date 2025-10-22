@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import * as jwt from 'jsonwebtoken';
 
 

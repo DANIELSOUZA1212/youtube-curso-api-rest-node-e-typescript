@@ -5,6 +5,7 @@ import * as yup from 'yup';
 import { PessoasProvider } from '../../database/providers/pessoas';
 import { validation } from '../../shared/middleware';
 import { IPessoa } from '../../database/models';
+// eslint-disable-next-line linebreak-style
 
 
 interface IParamProps {

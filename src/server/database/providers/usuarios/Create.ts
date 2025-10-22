@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { PasswordCrypto } from '../../../shared/services';
 import { ETableNames } from '../../ETableNames';
 import { IUsuario } from '../../models';

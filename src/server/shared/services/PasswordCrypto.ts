@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { genSalt, hash, compare } from 'bcryptjs';
 
 

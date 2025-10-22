@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { ETableNames } from '../../ETableNames';
 import { IPessoa } from '../../models';
 import { Knex } from '../../knex';

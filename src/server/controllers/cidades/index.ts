@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import * as deleteById from './DeleteById';
 import * as updateById from './UpdateById';
 import * as getById from './GetById';

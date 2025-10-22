@@ -6,6 +6,7 @@ import { CidadesProvider } from '../../database/providers/cidades';
 import { validation } from '../../shared/middleware';
 
 
+// eslint-disable-next-line linebreak-style
 interface IQueryProps {
   id?: number;
   page?: number;

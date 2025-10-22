@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { knex } from 'knex';
 import 'dotenv/config';
 import pg from 'pg';

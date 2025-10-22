@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { Knex } from 'knex';
 
 import { ETableNames } from '../ETableNames';

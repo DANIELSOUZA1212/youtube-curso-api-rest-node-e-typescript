@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { ICidade, IPessoa, IUsuario } from '../../models';
 
 

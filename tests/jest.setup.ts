@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import supertest from 'supertest';
 import { Knex } from '../src/server/database/knex';
 

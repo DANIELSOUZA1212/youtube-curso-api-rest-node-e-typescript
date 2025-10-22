@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { Knex } from 'knex';
 import path from 'path';
 

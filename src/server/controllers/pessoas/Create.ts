@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { StatusCodes } from 'http-status-codes';
 import { Request, Response } from 'express';
 import * as yup from 'yup';
