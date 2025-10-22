@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { Knex } from './server/database/knex';
 import { server } from './server/Server';
 
