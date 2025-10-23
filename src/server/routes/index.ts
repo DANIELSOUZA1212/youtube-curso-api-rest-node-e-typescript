@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import { Router } from 'express';
 
-import { CidadesController, PessoasController, UsuariosController } from './../controllers';
+import { MonitoramentoController, PessoasController, UsuariosController } from './../controllers';
 import { ensureAuthenticated } from '../shared/middleware';
 
 
@@ -14,11 +14,11 @@ router.get('/', (_, res) => {
   return res.send('Olá, DEV!');
 });
 
-router.get('/cidades', ensureAuthenticated, CidadesController.getAllValidation, CidadesController.getAll);
-router.post('/cidades', ensureAuthenticated, CidadesController.createValidation, CidadesController.create);
-router.get('/cidades/:id', ensureAuthenticated, CidadesController.getByIdValidation, CidadesController.getById);
-router.put('/cidades/:id', ensureAuthenticated, CidadesController.updateByIdValidation, CidadesController.updateById);
-router.delete('/cidades/:id', ensureAuthenticated, CidadesController.deleteByIdValidation, CidadesController.deleteById);
+router.get('/monitoramento', ensureAuthenticated, MonitoramentoController.getAllValidation, MonitoramentoController.getAll);
+router.post('/monitoramento', ensureAuthenticated, MonitoramentoController.createValidation, MonitoramentoController.create);
+router.get('/monitoramento/:id', ensureAuthenticated, MonitoramentoController.getByIdValidation, MonitoramentoController.getById);
+router.put('/monitoramento/:id', ensureAuthenticated, MonitoramentoController.updateByIdValidation, MonitoramentoController.updateById);
+router.delete('/monitoramento/:id', ensureAuthenticated, MonitoramentoController.deleteByIdValidation, MonitoramentoController.deleteById);
 
 router.get('/pessoas', ensureAuthenticated, PessoasController.getAllValidation, PessoasController.getAll);
 router.post('/pessoas', ensureAuthenticated, PessoasController.createValidation, PessoasController.create);

@@ -6,7 +6,7 @@ import { Knex } from '../../knex';
 
 export const create = async (pessoa: Omit<IPessoa, 'id'>): Promise<number | Error> => {
   try {
-    const [{ count }] = await Knex(ETableNames.cidade)
+    const [{ count }] = await Knex(ETableNames.monitoramento)
       .where('id', '=', pessoa.cidadeId)
       .count<[{ count: number }]>('* as count');
 

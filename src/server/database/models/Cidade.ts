@@ -1,7 +1,10 @@
 /* eslint-disable linebreak-style */
 
 
-export interface ICidade {
+export interface IMonitoramento {
   id: number;
-  nome: string;
+  cultivo: string;
+  quadra: string;
+  qtd_praga: string,
+  partes_afetadas: string;
 }

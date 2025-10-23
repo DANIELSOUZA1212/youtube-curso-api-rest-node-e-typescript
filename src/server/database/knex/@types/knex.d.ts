@@ -1,11 +1,11 @@
 /* eslint-disable linebreak-style */
-import { ICidade, IPessoa, IUsuario } from '../../models';
+import { IMonitoramento, IPessoa, IUsuario } from '../../models';
 
 
 declare module 'knex/types/tables' {
   interface Tables {
     pessoa: IPessoa;
-    cidade: ICidade;
+    monitoramento: IMonitoramento;
     usuario: IUsuario;
   }
 }

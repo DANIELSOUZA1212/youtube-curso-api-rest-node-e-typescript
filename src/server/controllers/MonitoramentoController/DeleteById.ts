@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import * as yup from 'yup';
 
-import { CidadesProvider } from '../../database/providers/cidades';
+import { MonitoramentoProvider } from '../../database/providers/monitoramentoProvider';
 import { validation } from '../../shared/middleware';
 
 
@@ -25,7 +25,7 @@ export const deleteById = async (req: Request<IParamProps>, res: Response) => {
     });
   }
 
-  const result = await CidadesProvider.deleteById(req.params.id);
+  const result = await MonitoramentoProvider.deleteById(req.params.id);
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       errors: {

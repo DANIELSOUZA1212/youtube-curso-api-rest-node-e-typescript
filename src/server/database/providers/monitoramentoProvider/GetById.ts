@@ -1,12 +1,12 @@
 /* eslint-disable linebreak-style */
 import { ETableNames } from '../../ETableNames';
-import { ICidade } from '../../models';
+import { IMonitoramento } from '../../models';
 import { Knex } from '../../knex';
 
 
-export const getById = async (id: number): Promise<ICidade | Error> => {
+export const getById = async (id: number): Promise<IMonitoramento | Error> => {
   try {
-    const result = await Knex(ETableNames.cidade)
+    const result = await Knex(ETableNames.monitoramento)
       .select('*')
       .where('id', '=', id)
       .first();

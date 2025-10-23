@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import * as yup from 'yup';
 
-import { CidadesProvider } from '../../database/providers/cidades';
+import { MonitoramentoProvider } from '../../database/providers/monitoramentoProvider';
 import { validation } from '../../shared/middleware';
 
 
@@ -23,8 +23,8 @@ export const getAllValidation = validation((getSchema) => ({
 }));
 
 export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Response) => {
-  const result = await CidadesProvider.getAll(req.query.page || 1, req.query.limit || 7, req.query.filter || '', Number(req.query.id || 0));
-  const count = await CidadesProvider.count(req.query.filter);
+  const result = await MonitoramentoProvider.getAll(req.query.page || 1, req.query.limit || 7, req.query.filter || '', Number(req.query.id || 0));
+  const count = await MonitoramentoProvider.count(req.query.filter);
 
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({

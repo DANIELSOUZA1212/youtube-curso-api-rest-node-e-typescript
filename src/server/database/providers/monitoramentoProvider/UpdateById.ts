@@ -1,13 +1,13 @@
 /* eslint-disable linebreak-style */
 import { ETableNames } from '../../ETableNames';
-import { ICidade } from '../../models';
+import { IMonitoramento } from '../../models';
 import { Knex } from '../../knex';
 
 
-export const updateById = async (id: number, cidade: Omit<ICidade, 'id'>): Promise<void | Error> => {
+export const updateById = async (id: number, monitoramento: Omit<IMonitoramento, 'id'>): Promise<void | Error> => {
   try {
-    const result = await Knex(ETableNames.cidade)
-      .update(cidade)
+    const result = await Knex(ETableNames.monitoramento)
+      .update(monitoramento)
       .where('id', '=', id);
 
     if (result > 0) return;

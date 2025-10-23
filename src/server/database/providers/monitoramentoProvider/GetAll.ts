@@ -1,12 +1,12 @@
 /* eslint-disable linebreak-style */
 import { ETableNames } from '../../ETableNames';
-import { ICidade } from '../../models';
+import { IMonitoramento } from '../../models';
 import { Knex } from '../../knex';
 
 
-export const getAll = async (page: number, limit: number, filter: string, id = 0): Promise<ICidade[] | Error> => {
+export const getAll = async (page: number, limit: number, filter: string, id = 0): Promise<IMonitoramento[] | Error> => {
   try {
-    const result = await Knex(ETableNames.cidade)
+    const result = await Knex(ETableNames.monitoramento)
       .select('*')
       .where('id', Number(id))
       .orWhere('nome', 'like', `%${filter}%`)
@@ -14,7 +14,7 @@ export const getAll = async (page: number, limit: number, filter: string, id = 0
       .limit(limit);
 
     if (id > 0 && result.every(item => item.id !== id)) {
-      const resultById = await Knex(ETableNames.cidade)
+      const resultById = await Knex(ETableNames.monitoramento)
         .select('*')
         .where('id', '=', id)
         .first();
